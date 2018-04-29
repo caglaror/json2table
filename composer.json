@@ -1,0 +1,7 @@
+{
+  "name": "json2Table/json2Table",
+  "description": "Update table data with given json and pagination added.",
+  "require": {
+    "php": "^7.0"
+  }
+}
