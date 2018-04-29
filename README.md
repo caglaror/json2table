@@ -1,4 +1,4 @@
-# jbjTable
+# json2Table
 A json2table with jQuery+bootstrap+paginator plugin (jquery)
 Using jquery and bootstrap (paging) to make (update) a table with given (or retrieved) json data.
 Using a jQuery plugin  named bootstrap-paginator.js v0.5, Copyright 2013 Yun Lai <lyonlai1984@gmail.com>

@@ -4,6 +4,18 @@ LIMIT 0, 1000
 
 -- Date: 2018-04-28 17:03
 */
+
+CREATE TABLE `countrylanguage` (
+  `CountryCode` char(3) NOT NULL DEFAULT '',
+  `Language` char(30) NOT NULL DEFAULT '',
+  `IsOfficial` enum('T','F') NOT NULL DEFAULT 'F',
+  `Percentage` float(4,1) NOT NULL DEFAULT '0.0',
+  PRIMARY KEY (`CountryCode`,`Language`),
+  KEY `CountryCode` (`CountryCode`),
+  CONSTRAINT `countryLanguage_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
 INSERT INTO `countrylanguage` (`CountryCode`,`Language`,`IsOfficial`,`Percentage`) VALUES ('ABW','Dutch','T',5.3);
 INSERT INTO `countrylanguage` (`CountryCode`,`Language`,`IsOfficial`,`Percentage`) VALUES ('ABW','English','F',9.5);
 INSERT INTO `countrylanguage` (`CountryCode`,`Language`,`IsOfficial`,`Percentage`) VALUES ('ABW','Papiamento','F',76.7);
